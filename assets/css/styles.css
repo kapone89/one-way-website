@@ -92,6 +92,14 @@ ul.grid{
 	justify-content: center;
 }
 
+.dark-font {
+	color: #555;
+}
+
+.light-font {
+	color: #fff;
+}
+
 
 /*-------------
  	Header
@@ -159,12 +167,7 @@ header nav li:last-child{
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
-	color: #fff;
 	text-align: center;
-}
-
-.hero.hero-inverted {
-	color: #555;
 }
 
 .background-image{
@@ -233,7 +236,6 @@ header nav li:last-child{
 
 .features{
 	position: relative;
-	color: #fff;
 }
 
 .features h1{

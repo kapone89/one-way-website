@@ -8,38 +8,45 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/smoothscroll.js"></script>
+
+  <script>
+    function scrollToSection(selector) {
+      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </head>
 
 <body>
 
 	<header>
-		<h2><a href="#">One Way</a></h2>
+		<h2><a href="/">One Way</a></h2>
 		<nav>
-			<li><a href="#">O nas</a></li>
-			<li><a href="#">Miasta</a></li>
-			<li><a href="#">Kontakt</a></li>
+			<li><a onclick="scrollToSection('#onas')">O nas</a></li>
+			<li><a onclick="scrollToSection('#miasta')">Miasta</a></li>
+			<li><a onclick="scrollToSection('#kontakt')">Kontakt</a></li>
 		</nav>
 	</header>
 
 
-	<section class="hero">
+	<section class="hero light-font">
 		<div class="background-image" style="background-image: url(assets/img/opole_uo/2.jpg);"></div>
 		<h1>One Way</h1>
 		<h3>Stowarzyszenie Akademickie</h3>
-		<a href="#" class="btn">Miasta, w których działamy</a>
+		<a onclick="scrollToSection('#miasta')" class="btn">Miasta, w których działamy</a>
 	</section>
 
 
-  <section class="reviews">
+  <section class="reviews" id="misja">
 		<h3 class="title">Misja</h3>
 		<p class="quote">Naszym nadrzędnym pragnieniem jest, aby każdy student w Polsce mógł usłyszeć Ewangelię o Bożej miłości, przebaczeniu w Jezusie oraz przyjaźni, która gwarantuje życie w radości i pokoju. Zależy nam, aby każdy sam podjął decyzję o tym, czy tą wiadomość przyjmuje czy odrzuca.</p>
 	</section>
 
 
-  <section class="features">
+  <section class="features light-font" id="miasta">
     <div class="background-image" style="background-image: url(assets/img/wroclaw/1.jpg);"></div>
 
     <h1 class="title">Miasta</h1>
@@ -48,21 +55,21 @@
 
     <ul class="grid">
       <li>
-        <a>
+        <a onclick="scrollToSection('#wroclaw')">
           <i class="fa fa-city"></i>
           <h4>Wrocław</h4>
           <p>Uniwersytet Przyrodniczy</p>
         </a>
       </li>
       <li>
-        <a>
+        <a onclick="scrollToSection('#opole_uo')">
           <i class="fa fa-university"></i>
           <h4>Opole</h4>
           <p>Uniwersytet Opolski</p>
         </a>
       </li>
       <li>
-        <a>
+        <a onclick="scrollToSection('#opole_po')">
           <i class="fa fa-flask"></i>
           <h4>Opole</h4>
           <p>Politechnika Opolska</p>
@@ -72,18 +79,15 @@
   </section>
 
 
-  <section class="reviews">
+  <section class="reviews" id="onas">
     <h3 class="title">O nas</h3>
     <p class="quote">Stowarzyszenie Akademickie „ONE WAY” jest ogólnopolską organizacją pozarządową, zrzeszającą studentów i młodych absolwentów wyższych uczelni, którzy utożsamiają się z wartościami chrześcijańskimi.</p>
-    <p class="quote">Jesteśmy organizacją ponadwyznaniową, otwartą na ludzi różnych wyznań, kościołów i środowisk chrześcijańskich. Działamy obecnie w trzech ośrodkach akademickich: Wrocławiu, Opolu i Gliwicach. Podstawą naszej działalności studenckiej jest wolontariat, który odgrywa kluczową rolę w realizacji celów i misji stowarzyszenia.</p>
-    <p class="quote">Celem stowarzyszenia jest m.in. propagowanie zdrowego stylu życia, bez narkotyków i alkoholu po przez pomaganie innym ludziom w rozwoju osobistym, zwłaszcza w przybliżaniu się do Boga.</p>
+    <p class="quote">Jesteśmy organizacją ponadwyznaniową, otwartą na ludzi różnych wyznań, kościołów i środowisk chrześcijańskich. Działamy obecnie w dwóch ośrodkach akademickich: Wrocławiu i Opolu. Podstawą naszej działalności studenckiej jest wolontariat, który odgrywa kluczową rolę w realizacji celów i misji stowarzyszenia.</p>
     <p class="quote">Organizujemy spotkania z ciekawymi gośćmi, dyskusje, warsztaty, koncerty, imprezy, wyjazdy i obozy. Na cotygodniowych spotkaniach wspólnie studiujemy Biblię, modlimy się i dyskutujemy próbując znaleźć odpowiedź na pytania nurtujące współczesnego człowieka. Bóg nie jest dla nas tematem tabu, z czego jesteśmy dumni.</p>
-    <p class="quote">Okres studiów to przełomowy czas, podczas którego kształtujemy własny system wartości, podejmujemy życiowe decyzje dotyczące kariery zawodowej, przekonań politycznych, małżeństwa czy wiary.</p>
-    <p class="quote">Wyższa uczelnia to nie tylko miejsce zdobywania wykształcenia, ale również miejsce intensywnego poszukiwania prawdy i zadawania sobie pytań, na które warto szukać odpowiedzi.</p>
   </section>
 
 
-	<section class="features">
+	<section class="features light-font" id="wroclaw">
     <div class="background-image" style="background-image: url(assets/img/wroclaw/2.jpg);"></div>
 
 		<h1 class="title">One Way</h1>
@@ -115,8 +119,9 @@
 		</div>
 	</section>
 
-  <section class="hero hero-inverted">
+  <section class="hero dark-font" id="statut">
     <h1>Statut</h1>
+    <h3>Pobierz nasz statut</h3>
     <a href="#" class="btn">
       <i class="fas fa-file-download"></i>
       Statut Stowarzyszenie "ONE WAY"
@@ -124,7 +129,7 @@
   </section>
 
 
-	<section class="features">
+	<section class="features light-font" id="opole_po">
     <div class="background-image" style="background-image: url(assets/img/opole_po/2.jpg);"></div>
 
 		<h1 class="title">Opole</h1>
@@ -156,7 +161,15 @@
 		</div>
 	</section>
 
-	<section class="features">
+
+  <section class="reviews" id="dlaczego">
+    <h3 class="title">Dlaczego?</h3>
+    <p class="quote">Celem stowarzyszenia jest m.in. propagowanie zdrowego stylu życia, bez narkotyków i alkoholu po przez pomaganie innym ludziom w rozwoju osobistym, zwłaszcza w przybliżaniu się do Boga.</p>
+    <p class="quote">Okres studiów to przełomowy czas, podczas którego kształtujemy własny system wartości, podejmujemy życiowe decyzje dotyczące kariery zawodowej, przekonań politycznych, małżeństwa czy wiary.</p>
+    <p class="quote">Wyższa uczelnia to nie tylko miejsce zdobywania wykształcenia, ale również miejsce intensywnego poszukiwania prawdy i zadawania sobie pytań, na które warto szukać odpowiedzi.</p>
+  </section>
+
+	<section class="features light-font" id="opole_uo">
     <div class="background-image" style="background-image: url(assets/img/opole_uo/1.jpg);"></div>
 
 		<h1 class="title">Opole</h1>
@@ -188,47 +201,39 @@
 		</div>
 	</section>
 
+  <section class="features dark-font" id="kontakt">
+    <h1 class="title">Kontakt</h1>
+    <hr class="fancy">
 
-  	<section class="our-work">
-  		<h3 class="title">Some of our work</h3>
-  		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-  		<hr class="fancy">
-
-  		<ul class="grid">
-  			<li class="small" style="background-image: url(assets/img/coast.jpg);"></li>
-  			<li class="large" style="background-image: url(assets/img/island.jpg);"></li>
-  			<li class="large" style="background-image: url(assets/img/balloon.jpg);"></li>
-  			<li class="small" style="background-image: url(assets/img/mountain.jpg);"></li>
-  		</div>
-  	</section>
-
-
-	<section class="reviews">
-		<h3 class="title">What others say:</h3>
-
-		<p class="quote">Mauris sit amet mauris a arcu eleifend ultricies eget ut dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		<p class="author">— Patrick Farrell</p>
-
-		<p class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-		<p class="author">— George Smith</p>
-
-		<p class="quote">Donec commodo dolor augue, vitae faucibus tortor tincidunt in. Aliquam vitae leo quis mi pulvinar ornare. Integer eu iaculis metus.</p>
-		<p class="author">— Kevin Blake</p>
-
-
-	</section>
-
-
-	<section class="contact">
-		<h3 class="title">Join our newsletter</h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.</p>
-		<hr class="fancy">
-
-		<form>
-			<input type="email" placeholder="Email">
-			<a href="#" class="btn">Subscribe now</a>
-		</form>
-	</section>
+    <ul class="grid">
+      <li>
+          <h4>Adres</h4>
+          <p>
+            Stowarzyszenie Akademickie<br/>
+            "One Way"<br/>
+            skr. poczt. 2015<br/>
+            50-415 Wrocław 1
+          </p>
+      </li>
+      <li>
+          <h4>Prezes Zarządu</h4>
+          <p>
+            Tomasz Wróbel<br/>
+            tel. +48 605 825 341<br/>
+            email: <a href="mailto:wroclaw@oneway.org.pl">wroclaw@oneway.org.pl</a>
+          </p>
+      </li>
+      <li>
+          <p>
+            KRS: 0000541846<br/>
+            NIP: 899 276 27 56<br/>
+            Regon: 360770874<br/>
+            Konto bankowe:<br/>
+            40 2030 0045 1110 0000 0404 0890
+          </p>
+      </li>
+    </div>
+  </section>
 </body>
 
 </html>
