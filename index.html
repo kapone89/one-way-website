@@ -15,7 +15,7 @@
   <script>
     function scrollToSection(selector) {
       document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
-      // location.hash = selector;
+      window.history.pushState("", "", selector);
     }
   </script>
 
@@ -124,7 +124,7 @@
   <section class="hero dark-font" id="statut">
     <h1>Statut</h1>
     <h3>Pobierz nasz statut</h3>
-    <a href="#" class="btn">
+    <a href="assets/docs/Statut_Stowarzyszenia_ONEWAY_tekst_jednolity_05_01_2015.pdf" class="btn">
       <i class="fas fa-file-download"></i>
       Statut Stowarzyszenie "ONE WAY"
     </a>
@@ -136,6 +136,7 @@
 
 		<h1 class="title">Opole</h1>
 		<h3 class="title">Politechnika Opolska</h3>
+    <p>Aktualne informacje o placówce znajdziesz na naszych mediach społecznościowych</p>
 		<hr class="fancy">
 
     <ul class="grid">
@@ -176,6 +177,7 @@
 
 		<h1 class="title">Opole</h1>
 		<h3 class="title">Uniwersytet Opolski</h3>
+    <p>Aktualne informacje o placówce znajdziesz na naszych mediach społecznościowych</p>
 		<hr class="fancy">
 
     <ul class="grid">
