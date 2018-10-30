@@ -23,7 +23,7 @@
     function scrollToSection(selector) {
       if (Element.prototype.scrollIntoView) {
         document.querySelector(selector).scrollIntoView({
-          behavior: 'smooth'
+          behavior: 'smooth', block: 'start'
         });
         window.history.pushState("", "", selector);
       } else {
@@ -142,7 +142,7 @@
     <h3>Pobierz nasz statut</h3>
     <a href="assets/docs/Statut_Stowarzyszenia_ONEWAY_tekst_jednolity_05_01_2015.pdf" class="btn">
       <i class="fas fa-file-download"></i>
-      Statut Stowarzyszenie "ONE WAY"
+      Statut Stowarzyszenia "ONE WAY"
     </a>
   </section>
 
