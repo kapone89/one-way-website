@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Stowarzyszenie Akademickie „ONE WAY” jest ogólnopolską organizacją pozarządową, zrzeszającą studentów i młodych absolwentów wyższych uczelni, którzy utożsamiają się z wartościami chrześcijańskimi." />
-    <title>One Way</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stowarzyszenie Akademickie „ONE WAY” jest ogólnopolską organizacją pozarządową, zrzeszającą studentów i młodych absolwentów wyższych uczelni, którzy utożsamiają się z wartościami chrześcijańskimi.">
+
+  <meta property="og:title" content="One Way - Stowarzyszenie Akademickie">
+  <meta property="og:description" content="Stowarzyszenie Akademickie „ONE WAY” jest ogólnopolską organizacją pozarządową, zrzeszającą studentów i młodych absolwentów wyższych uczelni, którzy utożsamiają się z wartościami chrześcijańskimi.">
+  <meta property="og:image" content="http://www.oneway.org.pl/assets/img/og_image.jpg">
+  <meta property="og:url" content="http://www.oneway.org.pl/">
+
+  <title>One Way</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/smoothscroll.js"></script>
 
   <script>
     function scrollToSection(selector) {
-      document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
-      window.history.pushState("", "", selector);
+      if (Element.prototype.scrollIntoView) {
+        document.querySelector(selector).scrollIntoView({
+          behavior: 'smooth'
+        });
+        window.history.pushState("", "", selector);
+      } else {
+        window.location.href = selector;
+      }
     }
   </script>
 
@@ -24,28 +36,29 @@
 
 <body>
 
-	<header>
-		<h2><a href="/">One Way</a></h2>
-		<nav>
-			<li><a onclick="scrollToSection('#onas')">O nas</a></li>
-			<li><a onclick="scrollToSection('#miasta')">Miasta</a></li>
-			<li><a onclick="scrollToSection('#kontakt')">Kontakt</a></li>
-		</nav>
-	</header>
+  <header>
+    <h2><a href="/">One Way</a></h2>
+    <nav>
+      <li><a onclick="scrollToSection('#onas')">O nas</a></li>
+      <li><a onclick="scrollToSection('#miasta')">Miasta</a></li>
+      <li><a onclick="scrollToSection('#kontakt')">Kontakt</a></li>
+    </nav>
+  </header>
 
 
-	<section class="hero light-font">
-		<div class="background-image" style="background-image: url(assets/img/opole_uo/2.jpg);"></div>
-		<h1>One Way</h1>
-		<h3>Stowarzyszenie Akademickie</h3>
-		<a onclick="scrollToSection('#miasta')" class="btn">Miasta, w których działamy</a>
-	</section>
+  <section class="hero light-font">
+    <div class="background-image" style="background-image: url(assets/img/opole_uo/2.jpg);"></div>
+    <h1>One Way</h1>
+    <h3>Stowarzyszenie Akademickie</h3>
+    <a onclick="scrollToSection('#miasta')" class="btn">Miasta, w których działamy</a>
+  </section>
 
 
   <section class="reviews" id="misja">
-		<h3 class="title">Misja</h3>
-		<p class="quote">Naszym nadrzędnym pragnieniem jest, aby każdy student w Polsce mógł usłyszeć Ewangelię o Bożej miłości, przebaczeniu w Jezusie oraz przyjaźni, która gwarantuje życie w radości i pokoju. Zależy nam, aby każdy sam podjął decyzję o tym, czy tą wiadomość przyjmuje czy odrzuca.</p>
-	</section>
+    <h3 class="title">Misja</h3>
+    <p class="quote">Naszym nadrzędnym pragnieniem jest, aby każdy student w Polsce mógł usłyszeć Ewangelię o Bożej miłości, przebaczeniu w Jezusie oraz przyjaźni, która gwarantuje życie w radości i pokoju. Zależy nam, aby każdy sam podjął decyzję o
+      tym, czy tą wiadomość przyjmuje czy odrzuca.</p>
+  </section>
 
 
   <section class="features light-font" id="miasta">
@@ -84,43 +97,45 @@
   <section class="reviews" id="onas">
     <h3 class="title">O nas</h3>
     <p class="quote">Stowarzyszenie Akademickie „ONE WAY” jest ogólnopolską organizacją pozarządową, zrzeszającą studentów i młodych absolwentów wyższych uczelni, którzy utożsamiają się z wartościami chrześcijańskimi.</p>
-    <p class="quote">Jesteśmy organizacją ponadwyznaniową, otwartą na ludzi różnych wyznań, kościołów i środowisk chrześcijańskich. Działamy obecnie w dwóch ośrodkach akademickich: Wrocławiu i Opolu. Podstawą naszej działalności studenckiej jest wolontariat, który odgrywa kluczową rolę w realizacji celów i misji stowarzyszenia.</p>
-    <p class="quote">Organizujemy spotkania z ciekawymi gośćmi, dyskusje, warsztaty, koncerty, imprezy, wyjazdy i obozy. Na cotygodniowych spotkaniach wspólnie studiujemy Biblię, modlimy się i dyskutujemy próbując znaleźć odpowiedzi na pytania nurtujące współczesnego człowieka. Bóg nie jest dla nas tematem tabu, z czego jesteśmy dumni.</p>
+    <p class="quote">Jesteśmy organizacją ponadwyznaniową, otwartą na ludzi różnych wyznań, kościołów i środowisk chrześcijańskich. Działamy obecnie w dwóch ośrodkach akademickich: Wrocławiu i Opolu. Podstawą naszej działalności studenckiej jest
+      wolontariat, który odgrywa kluczową rolę w realizacji celów i misji stowarzyszenia.</p>
+    <p class="quote">Organizujemy spotkania z ciekawymi gośćmi, dyskusje, warsztaty, koncerty, imprezy, wyjazdy i obozy. Na cotygodniowych spotkaniach wspólnie studiujemy Biblię, modlimy się i dyskutujemy próbując znaleźć odpowiedzi na pytania
+      nurtujące współczesnego człowieka. Bóg nie jest dla nas tematem tabu, z czego jesteśmy dumni.</p>
   </section>
 
 
-	<section class="features light-font" id="wroclaw">
+  <section class="features light-font" id="wroclaw">
     <div class="background-image" style="background-image: url(assets/img/wroclaw/2.jpg);"></div>
 
-		<h1 class="title">One Way</h1>
-		<h3 class="title">Wrocław</h3>
+    <h1 class="title">One Way</h1>
+    <h3 class="title">Wrocław</h3>
     <p>Aktualne informacje o placówce znajdziesz na naszych mediach społecznościowych</p>
-		<hr class="fancy">
+    <hr class="fancy">
 
-		<ul class="grid">
-			<li>
+    <ul class="grid">
+      <li>
         <a href="https://www.facebook.com/oneway.wroclaw/">
-  				<i class="fab fa-facebook"></i>
-  				<h4>Facebook</h4>
-  				<p>Bądź na bierząco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
-        </a>
-			</li>
-			<li>
-        <a href="https://www.instagram.com/onewaywroclaw/">
-  				<i class="fab fa-instagram"></i>
-  				<h4>Instagram</h4>
-  				<p>Zobacz aktualne zdjęcia i relacje.<br/>Daj się zainspirować!</p>
-        </a>
-    	</li>
-			<li>
-        <a href="https://m.me/oneway.wroclaw/">
-  				<i class="fab fa-facebook-messenger"></i>
-  				<h4>Messenger</h4>
-  				<p>Napisz do nas!<br/>Odpowiemy na wszystkie pytania.</p>
+          <i class="fab fa-facebook"></i>
+          <h4>Facebook</h4>
+          <p>Bądź na bieżąco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
         </a>
       </li>
-		</ul>
-	</section>
+      <li>
+        <a href="https://www.instagram.com/onewaywroclaw/">
+          <i class="fab fa-instagram"></i>
+          <h4>Instagram</h4>
+          <p>Zobacz aktualne zdjęcia i relacje.<br />Daj się zainspirować!</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://m.me/oneway.wroclaw/">
+          <i class="fab fa-facebook-messenger"></i>
+          <h4>Messenger</h4>
+          <p>Napisz do nas!<br />Odpowiemy na wszystkie pytania.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <section class="hero dark-font" id="statut">
     <h1>Statut</h1>
@@ -132,38 +147,38 @@
   </section>
 
 
-	<section class="features light-font" id="opole_po">
+  <section class="features light-font" id="opole_po">
     <div class="background-image" style="background-image: url(assets/img/opole_po/2.jpg);"></div>
 
-		<h1 class="title">Opole</h1>
-		<h3 class="title">Politechnika Opolska</h3>
+    <h1 class="title">Opole</h1>
+    <h3 class="title">Politechnika Opolska</h3>
     <p>Aktualne informacje o placówce znajdziesz na naszych mediach społecznościowych</p>
-		<hr class="fancy">
+    <hr class="fancy">
 
     <ul class="grid">
-			<li>
+      <li>
         <a href="https://www.facebook.com/onewayPO/">
-  				<i class="fab fa-facebook"></i>
-  				<h4>Facebook</h4>
-  				<p>Bądź na bierząco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
-        </a>
-			</li>
-			<li>
-        <a href="https://www.instagram.com/onewaypolitechnikaopolska/">
-  				<i class="fab fa-instagram"></i>
-  				<h4>Instagram</h4>
-  				<p>Zobacz aktualne zdjęcia i relacje.<br/>Daj się zainspirować!</p>
-        </a>
-    	</li>
-			<li>
-        <a href="https://m.me/onewayPO/">
-  				<i class="fab fa-facebook-messenger"></i>
-  				<h4>Messenger</h4>
-  				<p>Napisz do nas!<br/>Odpowiemy na wszystkie pytania.</p>
+          <i class="fab fa-facebook"></i>
+          <h4>Facebook</h4>
+          <p>Bądź na bieżąco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
         </a>
       </li>
-		</ul>
-	</section>
+      <li>
+        <a href="https://www.instagram.com/onewaypolitechnikaopolska/">
+          <i class="fab fa-instagram"></i>
+          <h4>Instagram</h4>
+          <p>Zobacz aktualne zdjęcia i relacje.<br />Daj się zainspirować!</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://m.me/onewayPO/">
+          <i class="fab fa-facebook-messenger"></i>
+          <h4>Messenger</h4>
+          <p>Napisz do nas!<br />Odpowiemy na wszystkie pytania.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
 
 
   <section class="reviews" id="dlaczego">
@@ -173,38 +188,38 @@
     <p class="quote">Wyższa uczelnia to nie tylko miejsce zdobywania wykształcenia, ale również miejsce intensywnego poszukiwania prawdy i zadawania sobie pytań, na które warto szukać odpowiedzi.</p>
   </section>
 
-	<section class="features light-font" id="opole_uo">
+  <section class="features light-font" id="opole_uo">
     <div class="background-image" style="background-image: url(assets/img/opole_uo/1.jpg);"></div>
 
-		<h1 class="title">Opole</h1>
-		<h3 class="title">Uniwersytet Opolski</h3>
+    <h1 class="title">Opole</h1>
+    <h3 class="title">Uniwersytet Opolski</h3>
     <p>Aktualne informacje o placówce znajdziesz na naszych mediach społecznościowych</p>
-		<hr class="fancy">
+    <hr class="fancy">
 
     <ul class="grid">
-			<li>
+      <li>
         <a href="https://www.facebook.com/ONE-WAY-Uniwersytet-Opolski-417539045064364/">
-  				<i class="fab fa-facebook"></i>
-  				<h4>Facebook</h4>
-  				<p>Bądź na bierząco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
-        </a>
-			</li>
-			<li>
-        <a href="https://www.instagram.com/oneway_uo/">
-  				<i class="fab fa-instagram"></i>
-  				<h4>Instagram</h4>
-  				<p>Zobacz aktualne zdjęcia i relacje.<br/>Daj się zainspirować!</p>
-        </a>
-    	</li>
-			<li>
-        <a href="https://m.me/417539045064364/">
-  				<i class="fab fa-facebook-messenger"></i>
-  				<h4>Messenger</h4>
-  				<p>Napisz do nas!<br/>Odpowiemy na wszystkie pytania.</p>
+          <i class="fab fa-facebook"></i>
+          <h4>Facebook</h4>
+          <p>Bądź na bieżąco. Sprawdź temat oraz miejsce najbliższego spotkania.</p>
         </a>
       </li>
-		</ul>
-	</section>
+      <li>
+        <a href="https://www.instagram.com/oneway_uo/">
+          <i class="fab fa-instagram"></i>
+          <h4>Instagram</h4>
+          <p>Zobacz aktualne zdjęcia i relacje.<br />Daj się zainspirować!</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://m.me/417539045064364/">
+          <i class="fab fa-facebook-messenger"></i>
+          <h4>Messenger</h4>
+          <p>Napisz do nas!<br />Odpowiemy na wszystkie pytania.</p>
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <section class="features dark-font" id="kontakt">
     <h1 class="title">Kontakt</h1>
@@ -212,30 +227,30 @@
 
     <ul class="grid">
       <li>
-          <h4>Adres</h4>
-          <p>
-            Stowarzyszenie Akademickie<br/>
-            "One Way"<br/>
-            skr. poczt. 2015<br/>
-            50-415 Wrocław 1
-          </p>
+        <h4>Adres</h4>
+        <p>
+          Stowarzyszenie Akademickie<br />
+          "One Way"<br />
+          skr. poczt. 2015<br />
+          50-415 Wrocław 1
+        </p>
       </li>
       <li>
-          <h4>Prezes Zarządu</h4>
-          <p>
-            Tomasz Wróbel<br/>
-            tel. +48 605 825 341<br/>
-            email: <a href="mailto:wroclaw@oneway.org.pl">wroclaw@oneway.org.pl</a>
-          </p>
+        <h4>Prezes Zarządu</h4>
+        <p>
+          Tomasz Wróbel<br />
+          tel. +48 605 825 341<br />
+          email: <a href="mailto:wroclaw@oneway.org.pl">wroclaw@oneway.org.pl</a>
+        </p>
       </li>
       <li>
-          <p>
-            KRS: 0000541846<br/>
-            NIP: 899 276 27 56<br/>
-            Regon: 360770874<br/>
-            Konto bankowe:<br/>
-            40 2030 0045 1110 0000 0404 0890
-          </p>
+        <p>
+          KRS: 0000541846<br />
+          NIP: 899 276 27 56<br />
+          Regon: 360770874<br />
+          Konto bankowe:<br />
+          40 2030 0045 1110 0000 0404 0890
+        </p>
       </li>
     </ul>
   </section>
